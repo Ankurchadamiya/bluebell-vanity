@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a3dab98d99.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png"  href="./img/VANITY LOGO-2.png">
+   <link rel="stylesheet" href="./css/style.css">
+    <title>BlueBell Vanity</title>
+<style>
+.card img{
+    /* width: 117%; */
+    width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card .label {
+    font-weight: 700;
+    font-size: x-large;
+    background: bisque;
+    padding: 5px;
+
+    transition: color 0.3s ease;
+}
+
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+
+.card:hover .label {
+  color: #c96b3e; /* Custom highlight color */
+}
+.container8 {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1500px !important;
+}
+
+/* Left-side filter box */
+.filter-box {
+  width: 38rem;
+  padding: 20px;
+  border: 1px solid #888;
+  background-color: #f9f6f1;
+}
+
+.filter-box h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.filter-box button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  height: 6rem;
+}
+
+.filter-box button:hover {
+  background-color: #eaeaea;
+}
+
+/* Right-side grid */
+.grid {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10%;
+  flex: 1; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(217px, 1fr));
+  gap: 20px;
+  flex: 1;
+}
+
+.product-card {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+  .container8 {
+    flex-direction: column;
+  }
+
+  .filter-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+</style>
+</head>
+<body>
+    <nav class="nav about-nav">
+        <div class="container">
+            <img src="./img/vamity_logo.png" class="logo lg-heading" style="width: 20%; height: 36%;">
+      <ul class="nav-items">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <!-- <li class="nav-item"><a href="products.html">Products</a></li> -->
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="center-heading">
+        <h1> Products</h1>
+      </div>
+    </nav>
+
+    <section style="margin: 20rem;">
+        <div class="container8">
+        <div class="filter-box">
+            <h3>Filter Product By</h3>
+            <button onclick="filterProducts('all')" class="active">All Products</button>
+            <button onclick="filterProducts('floor')">Floor Mount Cabinet</button>
+            <button onclick="filterProducts('wall')">Wall Mount Cabinet</button>
+          </div>
+        
+          <div class="grid" id="productGrid">
+            <div class="card" data-type="wall">
+              <img src="img/h3-768x768.webp" />
+              <div class="label">LUXE</div>
+            </div>
+            <div class="card" data-type="floor">
+              <img src="img/e8-1024x1024.webp" />
+              <div class="label">OPAL</div>
+            </div>
+            <div class="card" data-type="floor">
+              <img src="img/f2-768x768.webp" />
+              <div class="label">EDEN</div>
+            </div>
+            <div class="card" data-type="wall">
+              <img src="img/b4-768x768.webp" />
+              <div class="label">ROYAL</div>
+            </div>
+            <div class="card" data-type="wall">
+              <img src="img/c13-1024x1024.webp" />
+              <div class="label">REGAL</div>
+            </div>
+            <div class="card" data-type="wall">
+              <img src="img/a15-768x768.webp" />
+              <div class="label">AQUA</div>
+            </div>
+            <div class="card" data-type="floor">
+                <img src="img/g1-768x768.webp" />
+                <div class="label">PEARL</div>
+              </div>
+          </div>
+        </div>
+       </section>
+    
+
+    <footer class="belz-footer">
+        <div class="footer-container">
+          <div class="footer-left">
+            <img src="./img/VANITY_LOGO-1-removebg-preview.png" alt="Belz Vanity Logo" class="footer-logo" />
+            <p>Crafted to elevate every space with timeless design and unmatched quality</p>
+          </div>
+      
+          <div class="footer-links">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><strong>Corporate Office Address</strong><br>
+                City mall - Baypass,<br> Sanala road,<br> Morbi - Gujarat 
+              </p>
+            <p><strong>Manufacturing unit Address</strong><br>
+              Survey No. 197P, Plot No. 25,<br>
+              Dharmganga Estate, Old Ghuntu Road,<br>
+              Mahendranagar, Morbi-363642 Guj. INDIA.
+            </p>
+            <p><strong>Phone</strong><br>+91 91062 48104</p>
+            <p><strong>Email</strong><br><a href="mailto:belzvanity@gmail.com">exp@bluebellvanity.com</a></p>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>Copyright © 2025 BlueBell Vanity</p>
+          <div class="footer-policy-links">
+            <a href="about.html">Privacy Policy</a>
+            <a href="about.html">Terms & Services</a>
+          </div>
+        </div>
+      </footer>
+    <footer class="footer">
+        <div class="social-media-links">
+         <i class="fa-brands fa-facebook fa-4x"></i>
+         <i class="fa-brands fa-instagram fa-4x"></i>
+         <i class="fa-brands fa-twitter fa-4x"></i>
+        </div>
+        <p>BlueBell Vanity &copy;2025,all rights reserved</p>
+       </footer>
+</body>
+     <script>
+        function filterProducts(type) {
+          const buttons = document.querySelectorAll('.filter-box button');
+          buttons.forEach(btn => btn.classList.remove('active'));
+          event.target.classList.add('active');
+    
+          const cards = document.querySelectorAll('.card');
+          cards.forEach(card => {
+            if (type === 'all' || card.dataset.type === type) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        }
+      </script>
+</html>
