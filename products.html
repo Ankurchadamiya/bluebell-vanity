@@ -8,7 +8,20 @@
     <link rel="icon" type="image/png"  href="./img/VANITY LOGO-2.png">
    <link rel="stylesheet" href="./css/style.css">
     <title>BlueBell Vanity</title>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL },
+          'google_translate_element'
+        );
+      }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
 <style>
+  .marginall{
+    margin: 20rem;
+  }
 .card img{
     /* width: 117%; */
     width: 100%;
@@ -110,8 +123,12 @@
 @media (max-width: 768px) {
   .container8 {
     flex-direction: column;
-  }
+    width: fit-content;
 
+  }
+  .marginall{
+    margin: 2rem;
+  }
   .filter-box {
     width: 100%;
     margin-bottom: 20px;
@@ -139,7 +156,7 @@
       </div>
     </nav>
 
-    <section style="margin: 20rem;">
+    <section class="marginall">
         <div class="container8">
         <div class="filter-box">
             <h3>Filter Product By</h3>
@@ -187,6 +204,10 @@
           <div class="footer-left">
             <img src="./img/VANITY_LOGO-1-removebg-preview.png" alt="Belz Vanity Logo" class="footer-logo" />
             <p>Crafted to elevate every space with timeless design and unmatched quality</p>
+            <video autoplay muted loop class="footer-video">
+              <source src="./img/Belz-Footer.mp4" type="video/mp4" >
+              Your browser does not support the video tag.
+            </video>
           </div>
       
           <div class="footer-links">
@@ -203,14 +224,15 @@
             <h4>Contact Us</h4>
             <p><strong>Corporate Office Address</strong><br>
                 City mall - Baypass,<br> Sanala road,<br> Morbi - Gujarat 
-              </p>
+              </p><br>
             <p><strong>Manufacturing unit Address</strong><br>
               Survey No. 197P, Plot No. 25,<br>
               Dharmganga Estate, Old Ghuntu Road,<br>
               Mahendranagar, Morbi-363642 Guj. INDIA.
-            </p>
-            <p><strong>Phone</strong><br>+91 91062 48104</p>
-            <p><strong>Email</strong><br><a href="mailto:belzvanity@gmail.com">exp@bluebellvanity.com</a></p>
+            </p><br>
+            <p><strong>Phone</strong><br>+91 91062 48104</p><br>
+            <p><strong>Email</strong><br><a href="mailto:belzvanity@gmail.com">info@bluebellbath.in</a></p>
+            <div id="google_translate_element"></div>
           </div>
         </div>
       
@@ -225,8 +247,9 @@
     <footer class="footer">
         <div class="social-media-links">
          <i class="fa-brands fa-facebook fa-4x"></i>
-         <i class="fa-brands fa-instagram fa-4x"></i>
-         <i class="fa-brands fa-twitter fa-4x"></i>
+         <a style="color: #f4f4f4;" href="https://www.instagram.com/bluebell_vanity?igsh=MTEyYTI0azZ2ZWdjMg%3D%3D&utm_source=qr" target="_blank">
+          <i class="fa-brands fa-instagram fa-3x"></i>
+        </a>         <!-- <i class="fa-brands fa-twitter fa-4x"></i> -->
         </div>
         <p>BlueBell Vanity &copy;2025,all rights reserved</p>
        </footer>

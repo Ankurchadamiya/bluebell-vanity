@@ -8,6 +8,27 @@
     <link rel="icon" type="image/png"  href="./img/VANITY LOGO-2.png">
    <link rel="stylesheet" href="./css/style.css">
     <title>BlueBell Vanity</title>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL },
+            'google_translate_element'
+          );
+        }
+      </script>
+      <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+      <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+ (function(){
+    emailjs.init({
+      publicKey: "nxZHWgkVRwxX7368B",
+    });
+ })();
+</script>
+<script src="script.js"></script>
     <style>
         body{
 background-color: #fdf1e8;
@@ -24,7 +45,9 @@ background-color: #fdf1e8;
     display: flex;
     padding: 40px;
 }
-
+.padding{
+    padding: 0 0 20px 49px;
+}
 .contact-left {
     flex: 0 0 50%;
     padding-right: 30px;
@@ -171,47 +194,52 @@ background-color: #fdf1e8;
      <div class="form-wrapper container">
         <div class="componey-address">
             <div class="address">
-             <i class="fas fa-map fa-3x text-red"></i>           
-             <h2 class="text-gray md-heading">Corporate office Address :</h2>
-             <p>City mall - Baypass, Sanala road, Morbi - Gujarat</p>
+             <!-- <i class="fas fa-map fa-3x text-black"></i>    -->
+             <i class="fa-solid fa-address-card fa-3x"></i>        
+             <h2 class="text-gray small-heading">Corporate office Address :</h2>
+             <p class="padding">City mall - Baypass, Sanala road, Morbi - Gujarat</p>
             </div>
             <div class="address">
-                <i class="fas fa-map fa-3x text-red"></i>           
-                <h2 class="text-gray md-heading">Manufacturing unit Address :</h2>
-                <p>Near Trajpar, Ghutu road - Morbi (Gujarat)</p>
+                <!-- <i class="fas fa-map fa-3x text-black"></i>   -->
+                <i class="fa-solid fa-industry fa-3x"></i>         
+                <h2 class="text-gray small-heading">Manufacturing unit Address :</h2>
+                <p class="padding">Near Trajpar, Ghutu road - Morbi (Gujarat)</p>
                </div>
             <div class="address">
-             <i class="far fa-envelope fa-3x text-red"></i>
-             <h2 class="text-gray md-heading">E-mail</h2>
-             <p>exp@bluebellvanity.com</p>
+             <i class="far fa-envelope fa-3x text-black"></i>
+             <h2 class="text-gray small-heading">E-mail</h2>
+             <p class="padding">info@bluebellbath.in</p>
             </div>
             <div class="address">
-             <i class=" fas fa-phone-square-alt fa-3x text-red"></i>
-             <h2 class="text-gray md-heading">Call</h2>
-             <p>+91 91062 48104</p>
+             <!-- <i class=" fas fa-phone-square-alt fa-3x text-black"></i> -->
+             <i class="fa-solid fa-phone-volume fa-3x"></i>
+             <h2 class="text-gray small-heading">Call</h2>
+             <p class="padding">+91 91062 48104</p>
             </div>
             <img src="./img/company-img.jpg" alt="componey image">
         </div>
-        <form action="" class="form">
+        <!-- <form action="https://formsubmit.co/el/domuwu" method="POST" class="form"> -->
+            <form id="contactForm" class="form">
         <h1 class="lg-heading text-black c1">Contact Us</h1>
         <p class="text-gray">Let us know your qoestions,suggestion, suggestion and concern by filling out the contact form below</p>
         <div class="form-group">
-            <label for="username">username</label>
-            <input type="text" name="" id="username"required>
+            <label for="name">username</label>
+            <input type="text" name="name" id="username"required>
         </div>
         <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" name="" id="email"required>
+            <input type="email" name="email" id="email"required>
         </div>
         <div class="form-group"><label for="Phone">Phone</label>
-            <input type="text" name="" id="Phone"required></div>
+            <input type="text" name="Phone" id="Phone"required></div>
         <div class="form-group">
             <label for="message">Message</label>
-            <textarea  name="" id="message" ></textarea>
+            <textarea  name="message" id="message" ></textarea>
         </div>
-        <button type="submit" class="form-btn">Submit</button>
+        <button type="submit" onclick="sendEmail()" class="form-btn">Submit</button>
         </form>
      </div>
+     <div id="resultMessage"></div>
     </section>
 
     <!-- <div class="contact-container">
@@ -264,6 +292,10 @@ background-color: #fdf1e8;
           <div class="footer-left">
             <img src="./img/VANITY_LOGO-1-removebg-preview.png" alt="Belz Vanity Logo" class="footer-logo" />
             <p>Crafted to elevate every space with timeless design and unmatched quality</p>
+            <video autoplay muted loop class="footer-video">
+                <source src="./img/Belz-Footer.mp4" type="video/mp4" >
+                Your browser does not support the video tag.
+              </video>
           </div>
       
           <div class="footer-links">
@@ -280,15 +312,16 @@ background-color: #fdf1e8;
             <h4>Contact Us</h4>
             <p><strong>Corporate Office Address</strong><br>
                 City mall - Baypass,<br> Sanala road,<br> Morbi - Gujarat 
-              </p>
+              </p><br>
             <p><strong>Manufacturing unit Address</strong><br>
               Survey No. 197P, Plot No. 25,<br>
               Dharmganga Estate, Old Ghuntu Road,<br>
               Mahendranagar, Morbi-363642 Guj. INDIA.
-            </p>
-            <p><strong>Phone</strong><br>+91 91062 48104</p>
-            <p><strong>Email</strong><br><a href="mailto:belzvanity@gmail.com">exp@bluebellvanity.com</a></p>
-          </div>
+            </p><br>
+            <p><strong>Phone</strong><br>+91 91062 48104</p><br>
+            <p><strong>Email</strong><br><a href="mailto:belzvanity@gmail.com">info@bluebellbath.in</a></p>
+            <div id="google_translate_element"></div> 
+        </div>
         </div>
       
         <div class="footer-bottom">
@@ -302,10 +335,70 @@ background-color: #fdf1e8;
     <footer class="footer">
         <div class="social-media-links">
          <i class="fa-brands fa-facebook fa-4x"></i>
-         <i class="fa-brands fa-instagram fa-4x"></i>
-         <i class="fa-brands fa-twitter fa-4x"></i>
+         <a style="color: #f4f4f4;" href="https://www.instagram.com/bluebell_vanity?igsh=MTEyYTI0azZ2ZWdjMg%3D%3D&utm_source=qr" target="_blank">
+            <i class="fa-brands fa-instagram fa-3x"></i>
+          </a>
+         <!-- <i class="fa-brands fa-twitter fa-4x"></i> -->
         </div>
         <p>BlueBell Vanity &copy;2025,all rights reserved</p>
        </footer>
 </body>
+<!-- <script>
+     (function () {
+    emailjs.init("nxZHWgkVRwxX7368B"); // Replace with your EmailJS user ID
+  })();
+
+  // Form submit handler
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_aiqjlq2", "template_0f16hqv", this).then(
+      function () {
+        document.getElementById("resultMessage").innerText = "Message sent successfully!";
+        e.target.reset();
+      },
+      function (error) {
+        console.error("FAILED...", error);
+        document.getElementById("resultMessage").innerText = "Failed to send message.";
+      }
+    );
+  });
+</script> -->
+
+<!-- <script type="module">
+
+
+    emailjs.init("nxZHWgkVRwxX7368B"); // Your public key
+
+    const form = document.getElementById("contactForm");
+    const resultMsg = document.getElementById("resultMessage");
+
+    let param= {
+        name:document.getElementById("username").value,
+        email:document.getElementById("email").value,
+        message:document.getElementById("message").value
+
+    }
+    function sendEmail(){
+        emailjs.Send("service_aiqjlq2", "template_0f16hqv",param).then(alert("email sent !!"));
+
+    }
+    // form.addEventListener("submit", function (e) {
+    //   e.preventDefault();
+
+
+
+    //   emailjs.sendForm("service_aiqjlq2", "template_0f16hqv", this)
+        // .then(() => {
+        //   resultMsg.innerText = "✅ Message sent successfully!";
+        //   resultMsg.style.color = "green";
+        //   form.reset();
+        // })
+        // .catch((error) => {
+        //   console.error("FAILED...", error);
+        //   resultMsg.innerText = "❌ Failed to send message.";
+        //   resultMsg.style.color = "red";
+        // });
+    // });
+  </script> -->
 </html>
